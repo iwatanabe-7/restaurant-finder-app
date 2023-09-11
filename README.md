@@ -1,5 +1,6 @@
 # 概要
 大学の授業で作成したホットペッパーAPIを使用したcgiプログラム
+現在地から近いお店を検索できたり、お気に入りのお店を保存することができます
 ## 課題
 ランチや夕食を食べる店を決めるときに、いろいろなサイトを見たり、時間がかかってしまう。
 ご飯を食べようと思ったときに、複数の条件で店を検索プログラムがあれば便利だと考えた。
@@ -12,7 +13,7 @@ Siri→
 ## 使い方
 このレポジトリをクローンします
 ```
-git clone 
+git clone https://github.com/iwatanabee/restaurant-finder-app.git
 ```
 .envファイルを作成し、APIキーを設定
 ``` .env
@@ -25,6 +26,14 @@ python server.py
 
 
 ## 使用した技術
-API
-ホットペッパーAPI
-https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
+- Python 3.9.4
+- API <br>
+ホットペッパーのグルメサーチAPI<br>
+https://webservice.recruit.co.jp/doc/hotpepper/reference.html<br>
+geolocationAPI <br>https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
+
+## 画面
+検索画面<br>
+<img width="500" alt="スクリーンショット 2023-09-11 18 10 46" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/42279387-b256-4476-bd36-835b5970d5f7"><br>
+結果<br>
+<img width="500" alt="スクリーンショット 2023-09-11 18 11 04" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/e003e401-b2ea-4fd8-8e6a-a95556bf7fbc">

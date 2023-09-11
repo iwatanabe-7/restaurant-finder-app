@@ -32,10 +32,10 @@ python server.py
 https://webservice.recruit.co.jp/doc/hotpepper/reference.html<br>
 geolocationAPI <br>https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
 
-## 画面
+## 実際の画面
 検索画面<br>
 <img width="500" alt="スクリーンショット 2023-09-11 18 10 46" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/0a8385ad-1ae1-45bc-b8d2-628f228e4144">
 <br>
-結果<br>
+結果画面<br>
 <img width="500" alt="スクリーンショット 2023-09-11 18 11 04" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/d8524ac2-649c-4490-9491-52e557ccf65c">
 

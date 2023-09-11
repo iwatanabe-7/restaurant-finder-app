@@ -1,5 +1,5 @@
 # 概要
-大学の授業で作成したホットペッパーAPIを使用したcgiプログラム
+大学の授業で作成したホットペッパーAPIを使用したcgiプログラム<br>
 現在地から近いお店を検索できたり、お気に入りのお店を保存することができます
 ## 課題
 ランチや夕食を食べる店を決めるときに、いろいろなサイトを見たり、時間がかかってしまう。
@@ -34,6 +34,8 @@ geolocationAPI <br>https://developers.google.com/maps/documentation/geolocation/
 
 ## 画面
 検索画面<br>
-<img width="500" alt="スクリーンショット 2023-09-11 18 10 46" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/42279387-b256-4476-bd36-835b5970d5f7"><br>
+<img width="500" alt="スクリーンショット 2023-09-11 18 10 46" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/0a8385ad-1ae1-45bc-b8d2-628f228e4144">
+<br>
 結果<br>
-<img width="500" alt="スクリーンショット 2023-09-11 18 11 04" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/e003e401-b2ea-4fd8-8e6a-a95556bf7fbc">
+<img width="500" alt="スクリーンショット 2023-09-11 18 11 04" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/d8524ac2-649c-4490-9491-52e557ccf65c">
+

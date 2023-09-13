@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta content="text_html; charset=utf-8">
+        <title>お店検索</title>
+        <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    </head>
+    <body>
+        <form method="POST" class="mui-form" action="/cgi-bin/original/original_app.py">
+            <legend>お店の条件を入力</legend>
+            <input type="text" name="keyword" value="" placeholder="ジャンル"><br>
+            <label><input type="checkbox" name="lunch" value="0" placeholder="0">ランチの有無</label><br>
+            <input type="hidden" name="lat" value="{lat}">
+            <input type="hidden" name="lng" value="{lng}">
+            <label><input type="checkbox" name="shuffle" value="0" placeholder="0">シャッフル機能を使う</label><br>
+            <button type="submit" class="mui-btn mui-btn--primary "><span class="material-icons">search</span></button>
+        </form>
+    </body>
+</html>

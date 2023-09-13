@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 20k0148 渡邊 一翔 R01
+
 import os
 import requests
 import json
@@ -8,6 +8,7 @@ import html
 import io
 import sys
 from dotenv import load_dotenv
+import random
 
 # .envファイルの読み込み
 load_dotenv()
@@ -18,6 +19,7 @@ form_lunch = form.getvalue('lunch',"0")
 form_keyword = form.getvalue('keyword',"")
 form_lat = form.getvalue('lat',"")
 form_lng = form.getvalue('lng',"")
+form_shuffle = form.getvalue('shuffle',"")
 api_key = (os.environ['API_KEY'])
 
 name = ""
@@ -44,6 +46,11 @@ response = requests.get(
     }
 )
 list = json.loads(response.text)["results"]["shop"]
+
+# ランダムシャッフル
+if form_shuffle:
+    random.shuffle(list)
+
 for i, e in enumerate(list):
     name = e.get("name")
     access = e.get("access")
@@ -54,8 +61,7 @@ for i, e in enumerate(list):
     img = e.get("photo").get("pc").get("l")
     name = str(name)
     access = html.escape(access)
-    print(type(name))
-    print(type(access))
+
     tmp += f"""
         <div class="mui-col-sm-12 mui-col-md-6 mui-col-lg-4" id={i}>
             <div class="mui-panel" style="width:90%; height:50%; overflow:auto;">
@@ -66,7 +72,7 @@ for i, e in enumerate(list):
                 <p>休業日：      {close_day}</p>
                 <a href="{hp}">ホームページに飛ぶ</a><br>
                 <a href="{coupon}">クーポンを見る</a><br>
-                <form method="POST" action="favorite_registration.py">
+                <form method="POST" action="./favorite_registration.py">
                     <input type="hidden" name="restaurant_name" value="{name}">
                     <input type="hidden" name="access" value="{access}">
                     <input type="submit" value="お気に入り登録">
@@ -85,24 +91,9 @@ if list:
 else:
     address = "検索結果がありません"
 
-template = """
-<html>
-    <head>
-        <meta content="text_html; charset=utf-8">
-        <title>お店検索</title>
-        <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-    </head>
-    <body>
-        <h1>検索結果</h1>
-        <a href="../../view/original.html">ほかの検索をする</a>
-        <h2>{address}</h2>
-        <div class="mui-container">
-            {tmp}
-        </div>
-    </body>
-</html>
-"""
+with open('./view/result.html', 'r', encoding='utf-8') as template_file:
+    template = template_file.read()
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 result = template.format(address=address,tmp=tmp)
 print("Content-Type: text/html; charset=utf-8\n")

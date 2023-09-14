@@ -1,3 +1,20 @@
-body{
-  margin: 10%;
+/* body{
+  margin: 5% 7%;
+}
+
+.card-body{
+  text-align: center;
+}
+.card-text{
+  margin: 3% 14%;
+}
+.card-form{
+  text-align: left;
+} */
+.card {
+  margin: 3rem;
+}
+.btn-favorite {
+  background: #ff7373;
+  color:aliceblue;
 }

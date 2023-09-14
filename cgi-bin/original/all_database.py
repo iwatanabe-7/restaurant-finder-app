@@ -35,24 +35,18 @@ for i, row in enumerate(data):
 
 connection.commit()
 
-template = """
-<html>
-    <head>
-        <meta content="text/html; charset=utf-8">
-        <title>お気に入り登録完了</title>
-        <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-    </head>
-    <body>
-        <h2>登録したお店の一覧</h2>
-        <div class="mui-container">
-            <div class="mui-col-md-3">
+template = f"""
+    <html>
+        <head>
+            <meta content="text/html; charset=utf-8">
+            <title>お気に入り登録完了</title>
+        </head>
+        <body>
+            <h2>登録したお店の一覧</h2>
                 {tmp}
-            </div> 
-        </div>
-        <a href="../../view/original.html">検索</a> 
-    </body>
-</html>
+            <a href="../../view/original.html">検索</a> 
+        </body>
+    </html>
 """
 
 result = template.format(tmp=tmp)

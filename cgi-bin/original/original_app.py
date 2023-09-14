@@ -63,25 +63,23 @@ for i, e in enumerate(list):
     access = html.escape(access)
 
     tmp += f"""
-        <div class="mui-col-sm-12 mui-col-md-6 mui-col-lg-4" id={i}>
-            <div class="mui-panel" style="width:90%; height:50%; overflow:auto;">
-                <p>{name}</p>
-                <img src={img} style="width:50%;">
-                <p>アクセス：    {access}</p>
-                <p>営業時間：    {time}</p>
-                <p>休業日：      {close_day}</p>
-                <a href="{hp}">ホームページに飛ぶ</a><br>
-                <a href="{coupon}">クーポンを見る</a><br>
-                <form method="POST" action="./favorite_registration.py">
-                    <input type="hidden" name="restaurant_name" value="{name}">
-                    <input type="hidden" name="access" value="{access}">
-                    <input type="submit" value="お気に入り登録">
-                </form>
-            </div>
+    <div class="card w-50">
+        <div id={i}>
+            <p>{name}</p>
+            <img src={img} style="width:50%;">
+            <p>アクセス：    {access}</p>
+            <p>営業時間：    {time}</p>
+            <p>休業日：      {close_day}</p>
+            <a href="{hp}">ホームページに飛ぶ</a><br>
+            <a href="{coupon}">クーポンを見る</a><br>
+            <form method="POST" action="./favorite_registration.py">
+                <input type="hidden" name="restaurant_name" value="{name}">
+                <input type="hidden" name="access" value="{access}">
+                <input type="submit" value="お気に入り登録">
+            </form>
         </div>
+    </div>
     """
-
-
 
 if list:
     if not form_address:
@@ -98,4 +96,3 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 result = template.format(address=address,tmp=tmp)
 print("Content-Type: text/html; charset=utf-8\n")
 print(result)
-

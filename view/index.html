@@ -2,105 +2,61 @@
     <head>
         <meta http-equiv="Content-Type" content="text_html; charset=utf-8">
         <title>お店検索</title>
-        <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-        <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-        <style>
-            .mui-panel{
-                margin:5% 20%;
-            }
-            @font-face {
-                font-family: 'Material Icons';
-                font-style: normal;
-                font-weight: 400;
-                src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-                src: local('Material Icons'),
-                    local('MaterialIcons-Regular'),
-                    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-                    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-                    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-                }
-                .material-icons {
-                    font-family: 'Material Icons';
-                    font-weight: normal;
-                    font-style: normal;
-                    font-size: 36px;  /* Preferred icon size */
-                    display: inline-block;
-                    line-height: 1;
-                    text-transform: none;
-                    letter-spacing: normal;
-                    word-wrap: normal;
-                    white-space: nowrap;
-                    direction: ltr;
-
-                    /* Support for all WebKit browsers. */
-                    -webkit-font-smoothing: antialiased;
-                    /* Support for Safari and Chrome. */
-                    text-rendering: optimizeLegibility;
-
-                    /* Support for Firefox. */
-                    -moz-osx-font-smoothing: grayscale;
-
-                    /* Support for IE. */
-                    font-feature-settings: 'liga';
-                    }
-        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="./CSS/layout.css" rel="stylesheet">
     </head>
-    <body>
-        <div class="mui-appbar">
-            <table width="100%">
-              <tr style="vertical-align:middle;">
-                <td class="mui--appbar-height mui--text-white"><h1>お店検索プログラム</h1></td>
-              </tr>
-            </table>
-        </div>
-
-        <div class="mui-panel">
-            <h2>このプログラムについて</h2>
-            <p>このプログラムは、昼ご飯や夜ごはんを食べるときに、お店を早く検索できるプログラムです</p>
-            <p>検索機能だけではなく、現在の位置情報をもとに近くにあるお店を検索できたり、<br>
-                自分のお気に入りのお店を登録できたりもします.<br>
-                早速使ってみましょう
-            </p>
-        </div>
-        <div class="mui-container-fluid mui-panel" style="border:7px solid #aaa;">
-            <form method="POST" class="mui-form" action="/cgi-bin/original/original_app.py">
-                    <legend>お店の条件を入力</legend>
-                    <div class="mui-row mui--text-right">
-                        <div class="mui-col-xs-6 mui-col-md-4">
-                            <div class="mui-textfield">
-                                <input type="text" name="address" value="" placeholder="住所や駅名">
-                            </div>
-                        </div>
-                        <div class="mui-col-xs-6 mui-col-md-4">
-                            <div class="mui-textfield">
-                                <input type="text" name="keyword" value="" placeholder="ジャンル">
-                            </div>
+    <body class="bg-light">
+        <div class="container">
+            <div class="py-5">
+                <div class="card border-0 text-center bg-light mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title">お店検索アプリ</h2>
+                        <div class="card-text">
+                            <p class="lead">
+                                ごはんを食べるときに、お店を早く検索できるプログラムです。<br>
+                                位置情報をもとに近くにあるお店を検索することや
+                                自分のお気に入りのお店を登録できたりもします
+                            </p>
                         </div>
                     </div>
-                    <div class="mui-row">
-                        <div class="mui-col-xs-12 mui-col-md-4">
-                            <div class="mui-checkbox">
-                                <label><input type="checkbox" name="lunch" value="0" placeholder="0">ランチの有無</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form method="POST" class="mui-form" action="/cgi-bin/original/original_app.py">
+                            <h4 class="mb-3">お店の条件を入力</h4>
+                            <div class="mb-3">
+                                <label>場所</label>
+                                <input type="text" class="form-control" name="address" value="" placeholder="住所や駅名">
                             </div>
-                        </div>
-                        <div class="mui-col-xs-6 mui-col-md-4">  
+                            <div class="mb-3">
+                                <label>ジャンル</label>
+                                <input type="text" class="form-control" name="keyword" value="" placeholder="ジャンル">
+                            </div>
+                            <div class="mb-3">
+                                <label class="custom-control-label">
+                                    <input type="checkbox" class="custom-control-input" name="lunch" value="0" placeholder="0">
+                                    ランチの有無
+                                </label>
+                            </div>
+                            <div class="mt-5 mb-3">
+                                <button type="submit" class="btn btn-primary btn-lg w-100"><i class="bi bi-search"></i> Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-5">
+                            <form method="POST" action="../cgi-bin/original/local_info.py">
+                                <button type="submit" class="btn btn-success w-100"><i class="bi bi-geo-alt"></i> 現在地から探す</button>
+                            </form>
+                            <form method="POST" action="../cgi-bin/original/all_database.py">
+                                    <button type="submit" class="btn btn-danger w-100"><i class="bi bi-bookmark-heart"></i> お気に入り一覧を見る</button>
+                            </form>
                         </div>
                     </div>
-                    <button type="submit" class="mui-btn mui-btn--primary "><span class="material-icons">search</span></button>
+                </div>
                 
-            </form>
-            <form method="GET" action="../cgi-bin/original/local_info.py">
-                <input type="submit" class="mui-btn mui-btn--raised mui-btn--danger" value="現在地から探す">
-            </form>
-            <form method="GET" action="../cgi-bin/original/all_database.py">
-                <input type="submit" class="mui-btn mui-btn--primary" value="お気に入り一覧を見る">
-            </form>
+            </div>
         </div>
     </body>
 </html>
-
-<!-- URL:http://localhost:8000/view/index.html -->
-<!-- URL: http://localhost:8000/cgi-bin/original/original_app.py -->
-

@@ -38,8 +38,8 @@ geolocationAPI <br>https://developers.google.com/maps/documentation/geolocation/
 
 ## 実際の画面
 検索画面<br>
-<img width="500" alt="スクリーンショット 2023-09-15 0 32 03" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/151dc59e-1b70-4337-82e9-c15b93be03f1">
+<img width="500" alt="スクリーンショット 2023-09-15 0 31 40" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/425870ed-09f0-4cd4-835a-c13bf5667694">
 
 結果画面<br>
-<img width="500" alt="スクリーンショット 2023-09-15 0 32 51" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/120ca275-28f4-4aab-b492-d7d23f0118be">
+<img width="500" alt="スクリーンショット 2023-09-16 20 49 59" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/12c9ba1b-f392-4941-8e06-63a0e303605e">
 

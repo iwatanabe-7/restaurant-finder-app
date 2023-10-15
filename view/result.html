@@ -21,11 +21,8 @@
                     <div class="col-md-4">
                         <div class="mb-5">
                             <a href="../../view/index.html" class="btn btn-primary w-100 mb-3" role="button" data-bs-toggle="button"><i class="bi bi-search"></i> 検索条件を変更</a>
-                            <form method="POST" action="../cgi-bin/original/local_info.py">
+                            <form method="POST" action="../cgi-bin/near_restaurants.py">
                                 <button type="submit" class="btn btn-success w-100"><i class="bi bi-geo-alt"></i> 現在地から探す</button>
-                            </form>
-                            <form method="POST" action="../cgi-bin/original/all_database.py">
-                                <button type="submit" class="btn btn-danger w-100"><i class="bi bi-bookmark-heart"></i> お気に入り一覧を見る</button>
                             </form>
                         </div>
                         <h2>機能一覧</h2>
@@ -37,18 +34,9 @@
                                         ランダムでお店を決めてくれます。
                                     </p>
                                 </div>
-                                <button type="button" class="btn btn-success w-100">シャッフル機能
-                                </button>
-                            </div>
-                            <div class="card w-50">
-                                <img src="/view/img/cat_favorite_shop.png" class="card-img-top" alt="ゆるいねことお気に入り一覧にいく">
-                                <div class="card-body">
-                                    <p class="card-text mt-4">
-                                        みんなが登録したお気に入り一覧を見にいきましょう
-                                    </p>
-                                </div>
-                                <button type="button" class="btn btn-danger w-100">お気に入り一覧を見る
-                                </button>
+                                <form method="POST" action="../cgi-bin/near_restaurants.py">
+                                    <button type="submit" class="btn btn-success w-100"> シャッフル機能</button>
+                                </form>
                             </div>
                             <div class="card w-50">
                                 <img src="/view/img/cat_local_search.png" class="card-img-top" alt="ゆるいねこと一緒にお店を探す">
@@ -57,8 +45,9 @@
                                         現在地からお店を探しましょう
                                     </p>
                                 </div>
-                                <button type="button" class="btn btn-success w-100">現在地から探す
-                                </button>
+                                <form method="POST" action="../cgi-bin/near_restaurants.py">
+                                    <button type="submit" class="btn btn-success w-100"><i class="bi bi-geo-alt"></i> 現在地から探す</button>
+                                </form>
                             </div>
                             <div class="card w-50">
                                 <img src="/view/img/cat_search.png" class="card-img-top" alt="ゆるいねこと一緒に検索条件を変えて検索">
@@ -67,7 +56,7 @@
                                         条件を変えて検索してみよう
                                     </p>
                                 </div>
-                                <button type="button" class="btn btn-primary w-100">検索条件を変える
+                                <button type="button" onclick="location.href='../view/index.html'" class="btn btn-primary w-100">検索条件を変える
                                 </button>
                             </div>
                         </div>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta content="text_html; charset=utf-8">
+        <title>お店検索</title>
+    </head>
+    <body>
+        <form method="POST" action="/cgi-bin/restaurant_info_api.py">
+            <legend>お店の条件を入力</legend>
+            <input type="text" name="keyword" value="" placeholder="ジャンル"><br>
+            <label><input type="checkbox" name="lunch" value="0" placeholder="0">ランチの有無</label><br>
+            <input type="hidden" name="lat" value="{lat}">
+            <input type="hidden" name="lng" value="{lng}">
+            <label><input type="checkbox" name="shuffle" value="0" placeholder="0">おすすめ機能を使う</label><br>
+            <button type="submit" class="mui-btn mui-btn--primary ">search</button>
+        </form>
+    </body>
+</html>

@@ -80,7 +80,6 @@ for i, e in enumerate(list):
                                         <form method="POST" action="./favorite_registration.py">
                                             <input type="hidden" name="restaurant_name" value="{name}">
                                             <input type="hidden" name="access" value="{access}">
-                                            <button type="submit"><i class="bi bi-heart"></i></button>
                                         </form>
                                     </div>
                                 </div>

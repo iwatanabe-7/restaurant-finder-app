@@ -4,13 +4,12 @@
 また、お店をなかなか決められない人のためのランダムでお店を選んでくれる機能もあります。
 
 ## 課題
-ランチや夕食を食べる店を決めるときに、時間がかかってしまう。
-ご飯を食べようと思ったときに、すぐ決められるようなプログラムがあれば便利だと考えた。
+データベースとAPIを使ってcgiプログラムを作成する課題が出たで、前から興味があったホットペッパーAPIのグルメサーチAPIを使用してアプリを作ってみようと思った。
+ランチや夕食を食べる店を決めるときに、時間がかかってしまうので、ご飯を食べようと思ったときに、すぐ決められるようなプログラムがあれば便利だと考えた。
 
 ## 機能
 ・現在地から近いお店を条件に合わせて検索できる 昼と夜で検索条件が変わる
 ・ランダムでお店を選んでくれる
-・
 ・金欠大学生のためのクーポン情報表示
 
 ## 使い方
@@ -30,11 +29,12 @@ URLにアクセス
 URL: http://localhost:8000/view/index.html
 
 ## 使用した技術
-- Python 3.9.4
+- Python 3.9.4 (課題のため)
 - API <br>
-ホットペッパーのグルメサーチAPI<br>
+ホットペッパーのグルメサーチAPI　(無料で利用できるのが、これだけだった)<br> 
 https://webservice.recruit.co.jp/doc/hotpepper/reference.html<br>
-geolocationAPI <br>https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
+geolocationAPI (現在地を取得する用)<br>
+https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
 
 ## 実際の画面
 検索画面<br>

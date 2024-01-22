@@ -1,4 +1,8 @@
 # 概要
+<p align="center">
+  <img width="700" alt="スクリーンショット 2023-09-15 0 31 40" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/425870ed-09f0-4cd4-835a-c13bf5667694"><br>
+</p>
+
 大学の授業で作成したホットペッパーAPIを使用したcgiプログラム<br>
 現在地から近いお店を検索できたり、お気に入りのお店を保存することができます。
 また、お店をなかなか決められない人のためのランダムでお店を選んでくれる機能もあります。
@@ -37,9 +41,14 @@ geolocationAPI (現在地を取得する用)<br>
 https://developers.google.com/maps/documentation/geolocation/overview?hl=ja
 
 ## 実際の画面
-検索画面<br>
-<img width="500" alt="スクリーンショット 2023-09-15 0 31 40" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/425870ed-09f0-4cd4-835a-c13bf5667694">
 
-結果画面<br>
-<img width="500" alt="スクリーンショット 2023-09-16 20 49 59" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/12c9ba1b-f392-4941-8e06-63a0e303605e">
+<p align="center">
+  検索画面<br>
+  <img width="700" alt="スクリーンショット 2023-09-15 0 31 40" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/425870ed-09f0-4cd4-835a-c13bf5667694">
+</p>
+
+<p align="center">
+  結果画面<br>
+  <img width="700" alt="スクリーンショット 2023-09-16 20 49 59" src="https://github.com/iwatanabee/restaurant-finder-app/assets/83575309/12c9ba1b-f392-4941-8e06-63a0e303605e">
+</p>
 
